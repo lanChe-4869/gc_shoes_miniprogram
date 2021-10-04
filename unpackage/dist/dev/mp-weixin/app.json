@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/photograph/photograph",
+    "pages/shoes/shoes"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#4797EB",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#000000",
+    "selectedColor": "#4797EB",
+    "height": "50px",
+    "fontSize": "10px",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "static/images/tabBar/selected/home.png",
+        "iconPath": "static/images/tabBar/unselected/home.png"
+      },
+      {
+        "pagePath": "pages/photograph/photograph",
+        "text": "拍照",
+        "selectedIconPath": "static/images/tabBar/selected/photograph.png",
+        "iconPath": "static/images/tabBar/unselected/photograph.png"
+      },
+      {
+        "pagePath": "pages/shoes/shoes",
+        "text": "个人中心",
+        "selectedIconPath": "static/images/tabBar/selected/shoes.png",
+        "iconPath": "static/images/tabBar/unselected/shoes.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

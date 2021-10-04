@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+.container {
+	font-size: 14px;
+	width: 750rpx;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+}
+._h1{
+  font-size: 72rpx;
+}
+._h2{
+  font-size:60rpx;
+}
+._h3{
+  font-size:48rpx;
+}
+._h4{
+  font-size:40rpx;
+}
+._h5{
+  font-size:32rpx;
+}
+._hr{
+  width:90%;
+}
+.fn-mgBt{
+  margin-bottom: 40rpx;
+}
+.fn-mgTop{
+  margin-top:40rpx;
+}
+

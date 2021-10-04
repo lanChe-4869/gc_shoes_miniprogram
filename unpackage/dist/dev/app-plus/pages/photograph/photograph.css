@@ -1,0 +1,57 @@
+
+body {
+		background-color: #F6F6F6;
+}
+.g-header {
+		margin-top: 3rem;
+		width: 21.8125rem;
+		padding: 0 0.8125rem;
+		height: 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+}
+.header-sch {
+		padding-top: 0.625rem;
+}
+.g-main {
+		width: 23.4375rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+}
+.takePhoto {
+		position: absolute;
+		right: 0.625rem;
+		top: 20rem;
+		border-radius: 50%;
+		padding: 0.3125rem 0.3125rem;
+		background-color: #F6F6F6;
+}
+.resTable {
+		width: 18.1875rem;
+}
+.res-tr {
+		height: 1.5625rem;
+		width: 100%;
+		padding: 0.3125rem 0;
+		display: flex;
+		align-items: center;
+		font-size: 0.9375rem;
+		color: #4B4B4B;
+}
+.res-title {
+		width: 8.125rem;
+}
+.res-left {
+		width: 2.5rem;
+}
+.res-unit {
+		width: 0.9375rem;
+		margin-left: 0.4375rem;
+}
+.res-right {
+		margin-left: 1.5625rem;
+		width: 2.5rem;
+}

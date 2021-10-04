@@ -1,0 +1,195 @@
+
+page {
+	background: #f6f6f6;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow-x: scroll;
+	width: 750rpx;
+}
+.preBg {
+	width: 750rpx;
+	overflow-x: hidden;
+}
+#bgPos {
+	position: relative;
+	overflow-x: hidden;
+	width: 750rpx;
+	height: 452rpx;
+}
+#bgRound {
+	position: absolute;
+	width: 1704rpx;
+	left: -470rpx;
+	top: -1252rpx;
+	height: 1704rpx;
+	border-radius: 50%;
+	background-color: #4797EB;
+}
+.g-header {
+	position: fixed;
+	width: 680rpx;
+	display: flex;
+	justify-content: space-around;
+	padding: 0rpx 30rpx 40rpx 40rpx;
+	margin-top: 100rpx;
+	z-index: 1;
+}
+.m-box {
+	display: flex;
+	justify-content: center;
+}
+.schBox {
+	width: 568rpx;
+	height: 62rpx;
+	padding: 0rpx 10rpx 0rpx 28rpx;
+	background: rgba(104, 104, 104, 0.25);
+	border: 1px solid rgba(255, 255, 255, 0.23137254901960783);
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.sch-btn {
+	width: 102rpx;
+	height: 48rpx;
+	background: #FFFFFF;
+	opacity: 0.9;
+	border-radius: 40rpx;
+	font-size: 26rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.text-in {
+	height: 100%;
+	width: 380rpx;
+	color: #e2e2e2;
+}
+.g-main {
+	position: absolute;
+	top:600rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.brand-info {
+	position: absolute;
+	top: 200rpx;
+	width: 670rpx;
+	height: auto;
+	overflow-x:hidden;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.brand-info-header {
+	width: 100%;
+	height: 21.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #EBA05C;
+	color: #FFFFFF;
+	font-size: 15px;
+}
+.brand-info-body {
+	background-size: cover;
+	width: 670rpx;
+	height: 344rpx;
+	border-radius: 40rpx;
+}
+.brand-point {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80rpx;
+	margin-top: 20rpx;
+}
+.brand-point-desc {
+	width: 16rpx;
+	height: 16rpx;
+	border-radius: 50%;
+	background-color: rgb(218, 218, 218);
+}
+.m-body {
+	margin: 40 48rpx;
+	width: 654rpx;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20rpx;
+}
+.shoes-info {
+	display: flex;
+	padding-left: 30rpx;
+	justify-content: space-between;
+}
+.shoes-info-left,
+.shoes-info-right {
+	display: flex;
+	flex-direction: column;
+}
+.shoes-img {
+	width: 90%;
+}
+.shoes-box-big {
+	width: 300rpx;
+	height: 372rpx;
+	background: #FFFFFF;
+	box-shadow: 6px 3px 6px rgba(104, 104, 104, 0.4);
+	border-radius: 20rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0rpx 0;
+}
+.shoes-box-normal {
+	width: 292rpx;
+	height: 310rpx;
+	background: #FFFFFF;
+	box-shadow: 6px 3px 6px rgba(104, 104, 104, 0.4);
+	border-radius: 20rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0rpx 0;
+}
+.shoes-body {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+.shoes-title {
+	display: flex;
+	align-items: center;
+	padding: 20rpx 0 5rpx 0;
+}
+.shoes-title-mark-spring {
+	font-size: 12rpx;
+	color: #3968FA;
+	background-color: rgba(57, 104, 250, 0.5);
+}
+.shoes-title-mark-summer {
+	font-size: 12rpx;
+	color: #068990;
+	background-color: #71CDD3;
+}
+.shoes-title-name {
+	margin-left: 5rpx;
+	font-size: 24rpx;
+}
+.shoes-desc {
+	padding: 5rpx 0;
+	font-size: 20rpx;
+	color: #8D8D8D;
+}
+.shoes-price {
+	padding: 5rpx 0;
+	font-size: 24rpx;
+	color: #3968FA;
+}
+

@@ -1,0 +1,65 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationStyle":"custom",
+			"navigationBarTextStyle":"white",
+			"navigationBarBackgroundColor":"#4797EB"
+		}
+	},{
+		"path":"pages/photograph/photograph",
+		"style":{
+			"navigationBarTitleText":"测量尺寸",
+			"navigationBarTextStyle":"white",
+			"navigationBarBackgroundColor":"#4797EB"
+		}
+	},{
+		"path":"pages/shoes/shoes",
+		"style":{
+			"navigationBarTitleText":"个人中心",
+			"navigationBarTextStyle":"white",
+			"navigationBarBackgroundColor":"#4797EB"
+		}
+	},{
+		"path":"pages/shoes/myAddress/myAddress",
+		"style":{
+			"navigationBarTitleText":"我的地址"
+		}
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle":"black",
+		"navigationBarBackgroundColor":"#fdfdfd",
+		"backgroundColor": "#F5F5F5",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+	    "backgroundColor": "#ffffff",
+		"color":"#000000",
+		"selectedColor":"#4797EB",
+		"height": "50px",
+		"fontSize": "10px",
+		"position":"bottom",
+	    "list": [
+	      {
+	        "pagePath": "pages/index/index",
+			"text":"首页",
+	        "selectedIconPath": "static/images/tabBar/selected/home.png",
+	        "iconPath": "static/images/tabBar/unselected/home.png"
+	      },
+	      {
+	        "pagePath": "pages/photograph/photograph",
+			"text":"拍照",
+	        "selectedIconPath": "static/images/tabBar/selected/photograph.png",
+	        "iconPath": "static/images/tabBar/unselected/photograph.png"
+	      },
+	      {
+	        "pagePath": "pages/shoes/shoes",
+			"text":"个人中心",
+	        "selectedIconPath": "static/images/tabBar/selected/shoes.png",
+	        "iconPath": "static/images/tabBar/unselected/shoes.png"
+	      }
+	    ]
+	}
+}

@@ -1,0 +1,85 @@
+
+	/* pages/shoes/shoes.css */
+body {
+		background: #f6f6f6;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		width: 23.4375rem;
+}
+.line {
+		border-top: 2px solid #e0e0e0;
+		width: 90%;
+}
+.g-header {
+		position: relative;
+		width: 21.4375rem;
+		padding: 0.9375rem 1rem;
+		display: flex;
+		align-items: center;
+		background: #FFFFFF;
+}
+.headImg-box {
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		background-color: #d9d9d9;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+.header-desc {
+		margin-left: 1.4375rem;
+		display: flex;
+		flex-direction: column;
+		height: 3rem;
+		justify-content: space-between;
+}
+.header-setting {
+		margin-left: 5.625rem;
+}
+.g-main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 23.4375rem;
+}
+.st-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4.625rem;
+		width: 20.3125rem;
+}
+.st-box-desc {
+		width: 2.8125rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.625rem;
+}
+.st-box-desc-img {
+		width: 1.875rem;
+		height: 1.875rem;
+		margin-bottom: 0.25rem;
+}
+.md-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4.625rem;
+		width: 18.75rem;
+}
+.md-box-left {
+		display: flex;
+		align-items: center;
+}
+.md-box-left>uni-text {
+		font-size: 0.9375rem;
+		margin-left: 2.25rem;
+}
