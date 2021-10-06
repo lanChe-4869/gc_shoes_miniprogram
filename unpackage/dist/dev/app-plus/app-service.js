@@ -80,7 +80,7 @@
     }
     return sfc;
   };
-  const _sfc_main$4 = {
+  const _sfc_main$5 = {
     data() {
       return {
         href: "https://uniapp.dcloud.io/component/README?id=uniui"
@@ -99,7 +99,7 @@
       }
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createElementVNode("view", { id: "bgPos" }, [
         vue.createElementVNode("view", { id: "bgRound" })
@@ -229,8 +229,8 @@
       ])
     ]);
   }
-  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3]]);
-  const _sfc_main$3 = {
+  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4]]);
+  const _sfc_main$4 = {
     data() {
     },
     methods: {
@@ -246,7 +246,7 @@
       }
     }
   };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createElementVNode("view", { class: "g-main" }, [
         vue.createElementVNode("image", {
@@ -311,35 +311,61 @@
       ])
     ]);
   }
-  var PagesPhotographPhotograph = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2]]);
-  const _sfc_main$2 = {
+  var PagesPhotographPhotograph = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3]]);
+  const _sfc_main$3 = {
     data() {
     },
     methods: {
       toMyAddress() {
-        formatAppLog("log", "at pages/shoes/shoes.vue:79", "!!!");
         uni.navigateTo({
           url: "./myAddress/myAddress",
           events: {
             acceptDataFromOpenedPage: function(data) {
-              formatAppLog("log", "at pages/shoes/shoes.vue:85", data);
+              formatAppLog("log", "at pages/shoes/shoes.vue:90", data);
             },
             someEvent: function(data) {
-              formatAppLog("log", "at pages/shoes/shoes.vue:88", data);
+              formatAppLog("log", "at pages/shoes/shoes.vue:93", data);
             }
           },
           success: function(res) {
             res.eventChannel.emit("acceptDataFromOpenerPage", { data: "test" });
-            formatAppLog("log", "at pages/shoes/shoes.vue:94", res);
+            formatAppLog("log", "at pages/shoes/shoes.vue:99", res);
           },
           fail: function(res) {
-            formatAppLog("log", "at pages/shoes/shoes.vue:97", res);
+            formatAppLog("log", "at pages/shoes/shoes.vue:102", res);
           }
+        });
+      },
+      toMyFav() {
+        uni.navigateTo({
+          url: "./myFav/myFav",
+          events: {
+            acceptDataFromOpenedPage: function(data) {
+              formatAppLog("log", "at pages/shoes/shoes.vue:112", data);
+            },
+            someEvent: function(data) {
+              formatAppLog("log", "at pages/shoes/shoes.vue:115", data);
+            }
+          },
+          success: function(res) {
+            res.eventChannel.emit("acceptDataFromOpenerPage", { data: "test" });
+            formatAppLog("log", "at pages/shoes/shoes.vue:121", res);
+          },
+          fail: function(res) {
+            formatAppLog("log", "at pages/shoes/shoes.vue:124", res);
+          }
+        });
+      },
+      undevelopedFunc() {
+        uni.showToast({
+          title: "\u656C\u8BF7\u671F\u5F85",
+          image: "../../static/error.png",
+          duration: 1e3
         });
       }
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: ".container" }, [
       vue.createElementVNode("view", { class: "g-header" }, [
         vue.createElementVNode("view", { class: "headImg-box" }, [
@@ -374,7 +400,10 @@
             }),
             vue.createElementVNode("text", null, "\u6211\u7684\u8BA2\u5355")
           ]),
-          vue.createElementVNode("view", { class: "st-box-desc" }, [
+          vue.createElementVNode("view", {
+            class: "st-box-desc",
+            onClick: _cache[0] || (_cache[0] = (...args) => $options.toMyFav && $options.toMyFav(...args))
+          }, [
             vue.createElementVNode("image", {
               class: "st-box-desc-img",
               src: "/static/images/shoes/favorites.png"
@@ -399,7 +428,7 @@
         vue.createElementVNode("view", { class: "line" }),
         vue.createElementVNode("view", {
           class: "md-box",
-          onClick: _cache[0] || (_cache[0] = (...args) => $options.toMyAddress && $options.toMyAddress(...args))
+          onClick: _cache[1] || (_cache[1] = (...args) => $options.toMyAddress && $options.toMyAddress(...args))
         }, [
           vue.createElementVNode("view", { class: "md-box-left" }, [
             vue.createElementVNode("image", {
@@ -416,7 +445,10 @@
           ])
         ]),
         vue.createElementVNode("view", { class: "line" }),
-        vue.createElementVNode("view", { class: "md-box" }, [
+        vue.createElementVNode("view", {
+          class: "md-box",
+          onClick: _cache[2] || (_cache[2] = (...args) => $options.undevelopedFunc && $options.undevelopedFunc(...args))
+        }, [
           vue.createElementVNode("view", { class: "md-box-left" }, [
             vue.createElementVNode("image", {
               style: { "width": "56rpx", "height": "56rpx" },
@@ -450,9 +482,9 @@
       ])
     ]);
   }
-  var PagesShoesShoes = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1]]);
-  const _sfc_main$1 = {};
-  function _sfc_render(_ctx, _cache) {
+  var PagesShoesShoes = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2]]);
+  const _sfc_main$2 = {};
+  function _sfc_render$1(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createElementVNode("view", { class: "g-main" }, [
         vue.createElementVNode("view", { class: "m-body" }, [
@@ -584,7 +616,92 @@
       ])
     ]);
   }
-  var PagesShoesMyAddressMyAddress = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render]]);
+  var PagesShoesMyAddressMyAddress = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1]]);
+  const _sfc_main$1 = {};
+  function _sfc_render(_ctx, _cache) {
+    return vue.openBlock(), vue.createElementBlock("view", {
+      class: "container",
+      style: { "background-color": "#f5f5f5", "padding": "30rpx 16rpx 28rpx 16rpx" }
+    }, [
+      vue.createElementVNode("view", { class: "schBox" }, [
+        vue.createElementVNode("input", {
+          type: "text",
+          value: ""
+        }),
+        vue.createElementVNode("view", { class: "sch-btn" }, " \u641C\u7D22 ")
+      ]),
+      vue.createElementVNode("view", { class: "favPane" }, [
+        vue.createElementVNode("view", { class: "sortList" }, [
+          vue.createElementVNode("view", { style: { "display": "flex" } }, [
+            vue.createElementVNode("view", { class: "stLi" }, [
+              vue.createTextVNode(" \u978B\u9774\u5206\u7C7B "),
+              vue.createElementVNode("image", {
+                src: "/static/images/shoes/favorite/arrow.png",
+                mode: "widthFix"
+              })
+            ]),
+            vue.createElementVNode("view", { class: "stLi" }, [
+              vue.createTextVNode(" \u6536\u85CF\u65F6\u95F4 "),
+              vue.createElementVNode("image", {
+                src: "/static/images/shoes/favorite/arrow.png",
+                mode: "widthFix"
+              })
+            ])
+          ]),
+          vue.createElementVNode("image", {
+            src: "/static/images/shoes/favorite/edit.png",
+            mode: "widthFix",
+            class: "favEdit"
+          })
+        ]),
+        vue.createElementVNode("view", { class: "shoesList" }, [
+          vue.createElementVNode("view", { class: "shoesLi" }, [
+            vue.createElementVNode("image", {
+              src: "/static/images/shoes/favorite/shoes1.jpg",
+              mode: "widthFix",
+              class: "shoesLi-img"
+            }),
+            vue.createElementVNode("view", { class: "shoesLi-text" }, [
+              vue.createElementVNode("text", { class: "shoesLi-text-title" }, "\u674E\u5B81 \u97E6\u5FB7\u4E4B\u90537"),
+              vue.createElementVNode("text", { class: "shoesLi-text-content" }, "\u7EAA\u5FF5\u7248/\u767D\u8272/\u8367\u5149\u7CD6\u7C89"),
+              vue.createElementVNode("view", { class: "shoesLi-price" }, [
+                vue.createElementVNode("text", { class: "shoesLi-price-text" }, "\uFFE5 569.00"),
+                vue.createElementVNode("text"),
+                vue.createElementVNode("button", {
+                  type: "default",
+                  class: "shoesLi-price-btn"
+                }, [
+                  vue.createElementVNode("text", null, "\u8BE6\u60C5")
+                ])
+              ])
+            ])
+          ]),
+          vue.createElementVNode("view", { class: "shoesLi" }, [
+            vue.createElementVNode("image", {
+              src: "/static/images/shoes/favorite/shoes2.jpg",
+              mode: "widthFix",
+              class: "shoesLi-img"
+            }),
+            vue.createElementVNode("view", { class: "shoesLi-text" }, [
+              vue.createElementVNode("text", { class: "shoesLi-text-title" }, "\u674E\u5B81 \u9A6D\u5E0511"),
+              vue.createElementVNode("text", { class: "shoesLi-text-content" }, "\u6C34\u871C\u6843"),
+              vue.createElementVNode("view", { class: "shoesLi-price" }, [
+                vue.createElementVNode("text", { class: "shoesLi-price-text" }, "\uFFE5 499.00"),
+                vue.createElementVNode("text"),
+                vue.createElementVNode("button", {
+                  type: "default",
+                  class: "shoesLi-price-btn"
+                }, [
+                  vue.createElementVNode("text", null, "\u8BE6\u60C5")
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]);
+  }
+  var PagesShoesMyFavMyFav = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render]]);
   if (typeof Promise !== "undefined" && !Promise.prototype.finally) {
     Promise.prototype.finally = function(callback) {
       const promise = this.constructor;
@@ -600,6 +717,7 @@
   __definePage("pages/photograph/photograph", PagesPhotographPhotograph);
   __definePage("pages/shoes/shoes", PagesShoesShoes);
   __definePage("pages/shoes/myAddress/myAddress", PagesShoesMyAddressMyAddress);
+  __definePage("pages/shoes/myFav/myFav", PagesShoesMyFavMyFav);
   const _sfc_main = {
     onLaunch: function() {
       formatAppLog("warn", "at App.vue:4", "\u5F53\u524D\u7EC4\u4EF6\u4EC5\u652F\u6301 uni_modules \u76EE\u5F55\u7ED3\u6784 \uFF0C\u8BF7\u5347\u7EA7 HBuilderX \u5230 3.1.0 \u7248\u672C\u4EE5\u4E0A\uFF01");

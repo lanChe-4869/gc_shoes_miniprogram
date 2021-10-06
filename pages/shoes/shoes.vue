@@ -21,7 +21,7 @@
 					<image class="st-box-desc-img" src='../../static/images/shoes/orders.png'></image>
 					<text>我的订单</text>
 				</view>
-				<view class="st-box-desc">
+				<view class="st-box-desc" @click="toMyFav">
 					<image class="st-box-desc-img" src='../../static/images/shoes/favorites.png'></image>
 					<text>我的收藏</text>
 				</view>
@@ -35,6 +35,7 @@
 				</view>
 			</view>
 			<view class="line"></view>
+			
 			<view class="md-box" @click="toMyAddress">
 				<view class="md-box-left">
 					<image style="width:56rpx;height:56rpx;" src="../../static/images/shoes/location.png"></image>
@@ -44,8 +45,10 @@
 					<image style="width:60rpx;height:60rpx;" src="../../static/images/shoes/rightArrow.png"></image>
 				</view>
 			</view>
+			
 			<view class="line"></view>
-			<view class="md-box">
+			
+			<view class="md-box" @click="undevelopedFunc">
 				<view class="md-box-left">
 					<image style="width:56rpx;height:56rpx;" src="../../static/images/shoes/service.png"></image>
 					<text>在线客服</text>
@@ -54,7 +57,9 @@
 					<image style="width:60rpx;height:60rpx;" src="../../static/images/shoes/rightArrow.png"></image>
 				</view>
 			</view>
+			
 			<view class="line"></view>
+			
 			<view class="md-box">
 				<view class="md-box-left">
 					<image style="width:56rpx;height:56rpx;" src="../../static/images/shoes/feedback.png"></image>
@@ -64,6 +69,7 @@
 					<image style="width:60rpx;height:60rpx;" src="../../static/images/shoes/rightArrow.png"></image>
 				</view>
 			</view>
+			
 		</view>
 
 	</view>
@@ -76,7 +82,6 @@
 		},
 		methods:{
 			toMyAddress(){
-				console.log("!!!");
 				uni.navigateTo({
 				  url: './myAddress/myAddress',
 				  events: {
@@ -96,6 +101,35 @@
 				  fail:function(res){
 					  console.log(res);
 				  }
+				});
+			},
+			toMyFav(){
+				uni.navigateTo({
+				  url: './myFav/myFav',
+				  events: {
+				    // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+				    acceptDataFromOpenedPage: function(data) {
+				      console.log(data)
+				    },
+				    someEvent: function(data) {
+				      console.log(data)
+				    }
+				  },
+				  success: function(res) {
+				    // 通过eventChannel向被打开页面传送数据
+				    res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
+					console.log(res);
+				  },
+				  fail:function(res){
+					  console.log(res);
+				  }
+				});
+			},
+			undevelopedFunc(){
+				uni.showToast({
+				    title: "敬请期待",
+					image:"../../static/error.png",
+				    duration: 1000
 				});
 			}
 		}
