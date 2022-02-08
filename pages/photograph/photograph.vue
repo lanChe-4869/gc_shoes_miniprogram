@@ -68,6 +68,21 @@
 				    sourceType: ['album', 'camera'],
 				    success: function (res) {
 				        console.log(JSON.stringify(res.tempFilePaths));
+						
+						console.log('debug')
+						
+						uni.showLoading({
+						    title: '加载中'
+						});
+						
+						setTimeout(function () {
+						    uni.hideLoading();
+							uni.showToast({
+								title: "足部拍摄错误",
+								icon:'error',
+								duration: 2000
+							});
+						}, 2000);
 				    }
 				});
 			}

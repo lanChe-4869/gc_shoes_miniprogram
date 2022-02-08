@@ -66,7 +66,7 @@
 <style>
 	.schBox{
 		width: 592rpx;
-		height:62rpx;
+		height:70rpx;
 		padding-left: 30rpx;
 		padding-right: 10rpx;
 		border-radius: 100rpx;
@@ -74,11 +74,11 @@
 		align-items: center;
 		justify-content: space-between;
 		text-indent: 4rpx;
-		background-color: #D2D2D2;
+		background-color: #E1E1E1;
 	}
 	.sch-btn {
 		width: 102rpx;
-		height: 48rpx;
+		height: 54rpx;
 		background: #FFFFFF;
 		opacity: 0.9;
 		border-radius: 40rpx;

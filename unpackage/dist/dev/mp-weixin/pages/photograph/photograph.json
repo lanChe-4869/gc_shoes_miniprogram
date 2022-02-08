@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "测量尺寸",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#4797EB",
   "usingComponents": {}
 }

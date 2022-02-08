@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/shoes/shoes"],{
 
 /***/ 29:
-/*!****************************************************************!*\
-  !*** D:/source/test1/main.js?{"page":"pages%2Fshoes%2Fshoes"} ***!
-  \****************************************************************/
+/*!*******************************************************************!*\
+  !*** D:/source/gc_shoes/main.js?{"page":"pages%2Fshoes%2Fshoes"} ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17,9 +17,9 @@ createPage(_shoes.default);
 /***/ }),
 
 /***/ 30:
-/*!*********************************************!*\
-  !*** D:/source/test1/pages/shoes/shoes.vue ***!
-  \*********************************************/
+/*!************************************************!*\
+  !*** D:/source/gc_shoes/pages/shoes/shoes.vue ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -58,9 +58,9 @@ component.options.__file = "pages/shoes/shoes.vue"
 /***/ }),
 
 /***/ 31:
-/*!****************************************************************************!*\
-  !*** D:/source/test1/pages/shoes/shoes.vue?vue&type=template&id=03f89498& ***!
-  \****************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/source/gc_shoes/pages/shoes/shoes.vue?vue&type=template&id=03f89498& ***!
+  \*******************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80,9 +80,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 32:
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/test1/pages/shoes/shoes.vue?vue&type=template&id=03f89498& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/gc_shoes/pages/shoes/shoes.vue?vue&type=template&id=03f89498& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -107,9 +107,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 33:
-/*!**********************************************************************!*\
-  !*** D:/source/test1/pages/shoes/shoes.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************/
+/*!*************************************************************************!*\
+  !*** D:/source/gc_shoes/pages/shoes/shoes.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -123,12 +123,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 34:
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/test1/pages/shoes/shoes.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/gc_shoes/pages/shoes/shoes.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -200,13 +202,153 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+var _default =
+{
+  data: function data() {
+    return {
+      username: '用户名',
+      avatarUrl: '../../static/images/shoes/user-head.png',
+      score: 0,
+      hasUserInfo: false };
+
+  },
+  onLoad: function onLoad() {
+
+  },
+  onShow: function onShow() {
+    var that = this;
+    if (this.hasUserInfo == false) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '亲，授权微信登录后才能正常使用小程序功能',
+        success: function success(res) {
+          console.log(0);
+          console.log(res);
+          //如果用户点击了确定按钮
+          if (res.confirm) {
+            wx.getUserProfile({
+              desc: '获取你的昵称、头像、地区及性别',
+              success: function success(res) {
+                console.log(1);
+                console.log(res);
+                that.avatarUrl = res.userInfo.avatarUrl;
+                that.username = res.userInfo.nickName;
+                that.score = 300;
+                that.hasUserInfo = true;
+              },
+              fail: function fail(res) {
+                console.log(2);
+                console.log(res);
+                //拒绝授权
+                wx.showToast({
+                  title: '将无法正常使用',
+                  icon: 'error',
+                  duration: 2000 });
+
+                return;
+              } });
+
+          } else if (res.cancel) {
+            //如果用户点击了取消按钮
+            console.log(3);
+            uni.showToast({
+              title: '将无法正常使用',
+              icon: 'error',
+              duration: 2000 });
+
+            return;
+          }
+        } });
+
+
+    }
+
+  },
+  methods: {
+    toMyAddress: function toMyAddress() {
+      uni.navigateTo({
+        url: './myAddress/myAddress',
+        events: {
+          // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+          acceptDataFromOpenedPage: function acceptDataFromOpenedPage(data) {
+            console.log(data);
+          },
+          someEvent: function someEvent(data) {
+            console.log(data);
+          } },
+
+        success: function success(res) {
+          // 通过eventChannel向被打开页面传送数据
+          res.eventChannel.emit('acceptDataFromOpenerPage', {
+            data: 'test' });
+
+        },
+        fail: function fail(res) {
+          console.log(res);
+        } });
+
+    },
+    toMyFav: function toMyFav() {
+      uni.navigateTo({
+        url: './myFav/myFav',
+        events: {
+          // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+          acceptDataFromOpenedPage: function acceptDataFromOpenedPage(data) {
+            console.log(data);
+          },
+          someEvent: function someEvent(data) {
+            console.log(data);
+          } },
+
+        success: function success(res) {
+          // 通过eventChannel向被打开页面传送数据
+          res.eventChannel.emit('acceptDataFromOpenerPage', {
+            data: 'test' });
+
+          console.log(res);
+        },
+        fail: function fail(res) {
+          console.log(res);
+        } });
+
+    },
+    undevelopedFunc: function undevelopedFunc() {
+      uni.showToast({
+        title: "敬请期待",
+        image: "../../static/error.png",
+        duration: 1000 });
+
+    },
+    getUserProfile: function getUserProfile() {
+      console.log("debug");
+      var that = this;
+      wx.getUserProfile({
+        desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+        success: function success(res) {
+          console.log(res.userInfo);
+          that.avatarUrl = res.userInfo.avatarUrl;
+          that.username = res.userInfo.nickName;
+          that.score = 300;
+        },
+        fail: function fail(error) {
+          console.log(error);
+        } });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! @dcloudio/uni-mp-weixin/dist/uni.api.esm.js */ 3)["default"]))
 
 /***/ }),
 
 /***/ 35:
-/*!******************************************************************************!*\
-  !*** D:/source/test1/pages/shoes/shoes.vue?vue&type=style&index=0&lang=css& ***!
-  \******************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/source/gc_shoes/pages/shoes/shoes.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -220,9 +362,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 36:
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/test1/pages/shoes/shoes.vue?vue&type=style&index=0&lang=css& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/gc_shoes/pages/shoes/shoes.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

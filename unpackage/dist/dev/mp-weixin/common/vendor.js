@@ -1,16 +1,146 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
-/* 0 */,
-/* 1 */
-/*!**********************************!*\
-  !*** D:/source/test1/pages.json ***!
-  \**********************************/
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
+
+/***/ 1:
+/*!*************************************!*\
+  !*** D:/source/gc_shoes/pages.json ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 2 */
+
+/***/ 12:
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 2:
 /*!*******************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-vue/dist/vue.runtime.esm.js ***!
   \*******************************************************************/
@@ -4539,7 +4669,7 @@ function flushCallbacks(instance) {
     const ctx = instance.ctx;
     const callbacks = ctx.__next_tick_callbacks;
     if (callbacks && callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             const mpInstance = ctx.$scope;
             console.log('[' +
                 +new Date() +
@@ -4561,7 +4691,7 @@ function flushCallbacks(instance) {
 function nextTick$1(instance, fn) {
     const ctx = instance.ctx;
     if (!ctx.__next_tick_pending && !hasComponentEffect(instance)) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             const mpInstance = ctx.$scope;
             console.log('[' +
                 +new Date() +
@@ -4573,7 +4703,7 @@ function nextTick$1(instance, fn) {
         }
         return nextTick(fn && fn.bind(instance.proxy));
     }
-    if (Object({"NODE_ENV":"development","VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+    if (Object({"VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         const mpInstance = ctx.$scope;
         console.log('[' +
             +new Date() +
@@ -4653,7 +4783,7 @@ function patch(instance) {
         // data.__webviewId__ = mpInstance.data.__webviewId__
         const diffData = diff(data, getMPInstanceData(mpInstance, keys));
         if (Object.keys(diffData).length) {
-            if (Object({"NODE_ENV":"development","VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            if (Object({"VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
                 console.log('[' +
                     +new Date() +
                     '][' +
@@ -4977,7 +5107,8 @@ const createSSRApp = createApp;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! @dcloudio/uni-mp-weixin/dist/uni.api.esm.js */ 3)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/uni.mp.esm.js */ 6)["createApp"]))
 
 /***/ }),
-/* 3 */
+
+/***/ 3:
 /*!******************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/uni.api.esm.js ***!
   \******************************************************************/
@@ -5833,7 +5964,8 @@ var index = initUni(shims, protocols);exports.default = index;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! @dcloudio/uni-mp-weixin/dist/uni.api.esm.js */ 3)["default"]))
 
 /***/ }),
-/* 4 */
+
+/***/ 4:
 /*!*************************************************************!*\
   !*** ./node_modules/@vue/shared/dist/shared.esm-bundler.js ***!
   \*************************************************************/
@@ -6487,7 +6619,8 @@ const getGlobalThis = () => {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 5)))
 
 /***/ }),
-/* 5 */
+
+/***/ 5:
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -6517,7 +6650,8 @@ module.exports = g;
 
 
 /***/ }),
-/* 6 */
+
+/***/ 6:
 /*!*****************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/uni.mp.esm.js ***!
   \*****************************************************************/
@@ -7194,7 +7328,7 @@ function initData(vueOptions) {
       data = data.call(appConfig.globalProperties);
     }
     catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"test1","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data, e);
       }
     }
@@ -7711,138 +7845,280 @@ wx.createComponent = createComponent;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! @dcloudio/uni-mp-weixin/dist/uni.api.esm.js */ 3)["default"]))
 
 /***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+/***/ 67:
+/*!*************************************!*\
+  !*** D:/source/gc_shoes/js/list.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
+Object.defineProperty(exports, "__esModule", { value: true });exports.stRes = void 0;
+var stRes = {
+  "男士": {
+    "运动鞋": [
+    {
+      "title": "李宁云剑休闲男鞋",
+      "price": 499,
+      "pic_url": "https://img-blog.csdnimg.cn/c5d770ddf73d4170bd4be15adb5ec0dc.png",
+      "detail_url": "https://m.tb.cn/h.fPgHmwC?tk=9PCn2WTSYym" },
 
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
+    {
+      "title": "NB官方正品男款850系列水泥灰潮流复古运动鞋",
+      "price": 799,
+      "pic_url": "https://img-blog.csdnimg.cn/76764f9456734b43808b27eb6580878d.png",
+      "detail_url": "https://m.tb.cn/h.flf9lLW?tk=VbTI2WTS5AN" }],
 
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
 
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
+    "休闲鞋": [
+    {
+      "title": "华晨宇同款李宁休闲鞋男鞋复古老爹鞋厚底增高情侣鞋运动鞋女鞋",
+      "price": 439,
+      "pic_url": "https://img-blog.csdnimg.cn/a0604673126c4956afa996c8b558fe45.png",
+      "detail_url": "https://m.tb.cn/h.fm5IHtc?tk=VG5K2WTh5ub" },
 
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
+    {
+      "title": "FILA 斐乐休闲男鞋耐磨缓震跑步鞋",
+      "price": 880,
+      "pic_url": "https://img-blog.csdnimg.cn/851fe3dcbd5b476487b512b9dc4a5825.png",
+      "detail_url": "https://m.tb.cn/h.fOgYZBi?tk=RQ2T2WTSb1r" }],
 
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
 
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
+    "正装鞋": [
+    {
+      "title": "木林森夏季薄款透气皮鞋男真皮软底百搭休闲商务男鞋春秋2021新款",
+      "price": 188,
+      "pic_url": "https://img.alicdn.com/imgextra/i1/1728293990/O1CN01UIwBQo1fLSzvvI549_!!1728293990.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-22481282899.93.4e4932439U4Ob5&id=652076513249&rn=a152735910e066951f921b87b3c8dbae&abbucket=2" },
 
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
+    {
+      "title": "木林森皮鞋男商务正装2021年新款秋季清仓休闲工作鞋真皮软底潮鞋",
+      "price": 169,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/1728293990/O1CN017beGR91fLT0GgXoTh_!!1728293990.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-22481282899.88.4e4932439U4Ob5&id=653017969855&rn=a152735910e066951f921b87b3c8dbae&abbucket=2" },
 
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
+    {
+      "title": "木林森男鞋2021年冬季新款软底黑色真皮百搭皮鞋秋冬布洛克商务鞋",
+      "price": 289,
+      "pic_url": "https://img.alicdn.com/imgextra/i1/1728293990/O1CN01si7Ydl1fLT0rG6tDH_!!1728293990.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-22481282899.134.77263243wAEVGk&id=657811087158&rn=e0eeacd522cd6bd977880c371cae87a3&abbucket=2" },
 
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
+    {
+      "title": "木林森皮鞋男秋季一脚蹬复古商务男鞋防滑耐磨潮鞋秋冬低帮马丁靴",
+      "price": 178,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/1728293990/O1CN01Fr4b2I1fLT0ipnlpS_!!1728293990.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-22481282899.89.77263243wAEVGk&id=655892193543&rn=e0eeacd522cd6bd977880c371cae87a3&abbucket=2" }] },
 
+
+
+  "儿童": {
+    "帆布鞋": [
+    {
+      "title": "回力童鞋儿童帆布鞋2022春季新款女童小白鞋中大童板鞋男童饼干鞋",
+      "price": 158,
+      "pic_url": "https://img-blog.csdnimg.cn/ebd9b3ad99754fcfb32a6a3e6668e860.png",
+      "detail_url": "https://m.tb.cn/h.fPgqtJf?tk=CGaJ2WTgXal" },
+
+    {
+      "title": "回力童鞋男童鞋子2021春秋新款小白鞋魔术贴女童板鞋儿童帆布鞋潮",
+      "price": 138,
+      "pic_url": "https://img-blog.csdnimg.cn/6b9a460f1b2a474c8013aee29ed03ce9.png",
+      "detail_url": "https://m.tb.cn/h.flfjMWV?tk=MaLO2WThQmp" }],
+
+
+    "休闲鞋": [
+    {
+      "title": "FILA KIDS斐乐童鞋儿童运动鞋2021冬季新款男女小童闪灯鞋跑步鞋",
+      "price": 640,
+      "pic_url": "https://img-blog.csdnimg.cn/f6c6da20dec24a6a899d0739446f2fd0.png",
+      "detail_url": "https://m.tb.cn/h.fm5IZWT?tk=Muu02WThtSy" },
+
+    {
+      "title": "回力童鞋2021春秋新款儿童帆布鞋女童鞋子男童中大童小白鞋板鞋",
+      "price": 168,
+      "pic_url": "https://img-blog.csdnimg.cn/78c78fcf08e44ddf99baf7fee0d95719.png",
+      "detail_url": "https://m.tb.cn/h.fm5rMnq?tk=MMaC2WT6NDl" }],
+
+
+    "公主鞋": [
+    {
+      "title": "女童鞋子2020新款春秋季单鞋女童皮鞋公主鞋韩版水钻儿童跳舞鞋",
+      "price": 39,
+      "pic_url": "https://img.alicdn.com/imgextra/i4/3876742272/O1CN01a6WNAN1SecTjwcN6p_!!3876742272-0-lubanu-s.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=625026585343&spm=a1z0k.7386009.0.d4919233.464c7207nBY4xY&_u=t2dmg8j26111" },
+
+    {
+      "title": "女童黑色小皮鞋春秋公主鞋1-3岁宝宝软底玛丽珍单鞋夏5学园演出鞋",
+      "price": 29.9,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/3876742272/O1CN01tFO4701SecYiRudEt_!!0-item_pic.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=653310993992&spm=a1z0k.7386009.0.d4919233.464c7207nBY4xY&_u=t2dmg8j26111" },
+
+    {
+      "title": "2021春秋新儿童短靴黑色小皮鞋女童公主马丁靴软底宝宝洋气袜子靴",
+      "price": 49.8,
+      "pic_url": "https://img.alicdn.com/imgextra/i1/3876742272/O1CN01eSmMt71SecZFQfxPs_!!0-item_pic.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=654682176510&spm=a1z0k.7386009.0.d4919233.464c7207nBY4xY&_u=t2dmg8j26111" },
+
+    {
+      "title": "女童黑色皮鞋1-5岁宝宝玛丽珍鞋春秋小孩水晶公主芭蕾英伦风礼鞋3",
+      "price": 49.9,
+      "pic_url": "https://img.alicdn.com/imgextra/i2/3876742272/O1CN01m1yUmw1SecYoJI183_!!0-item_pic.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=652849241364&spm=a1z0k.7385961.1997985097.d4918997.464c7207tF00hO&_u=t2dmg8j26111" }],
+
+
+    "凉鞋": [
+    {
+      "title": "女童运动凉鞋2020新款夏季儿童小公主鞋网红爆款中大童软底沙滩鞋",
+      "price": 29.9,
+      "pic_url": "https://img.alicdn.com/imgextra/i1/3876742272/O1CN013FjYbP1SecSTYWRNp_!!3876742272-0-lubanu-s.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=617137486986&spm=a1z0k.7386009.0.d4919233.464c7207nBY4xY&_u=t2dmg8j26111" },
+
+    {
+      "title": "女童凉鞋2021新款夏季韩版儿童公主鞋网红爆款中大童软底沙滩凉鞋",
+      "price": 29.9,
+      "pic_url": "https://img.alicdn.com/imgextra/i4/3876742272/O1CN01AVXhpa1SecWfnGCRM_!!0-item_pic.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=639732410200&spm=a1z0k.7386009.0.d4919233.464c7207nBY4xY&_u=t2dmg8j26111" },
+
+    {
+      "title": "女童凉鞋2021新款夏季软底儿童鞋小女孩时尚公主鞋子中大童沙滩鞋",
+      "price": 39.9,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/3876742272/O1CN018Iq18E1SecXxeNHcD_!!0-item_pic.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=643585572968&spm=a1z0k.7386009.0.d4919233.464c7207nBY4xY&_u=t2dmg8j26111" },
+
+    {
+      "title": "女童凉鞋2021新款夏季网红公主儿童运动凉鞋软底防滑小童宝宝鞋子",
+      "price": 39.9,
+      "pic_url": "https://img.alicdn.com/imgextra/i1/3876742272/O1CN01I4CpY11SecX6da8qL_!!3876742272.jpg_60x60q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=642192695838&spm=a1z0k.7385961.1997985097.d4918997.464c7207tF00hO&_u=t2dmg8j26111" }] },
+
+
+
+  "女士": {
+    "休闲鞋": [
+    {
+      "title": "回力女鞋2021年夏季新款网面透气老爹鞋女百搭休闲跑步国潮运动鞋",
+      "price": 369,
+      "pic_url": "https://img-blog.csdnimg.cn/78cd730bdc1b4d7da6bdd8aad87779fa.png",
+      "detail_url": "https://m.tb.cn/h.fPgszAO?tk=qat82WT7l76" },
+
+    {
+      "title": "飞跃女鞋德训鞋2022春新款复古绿撞色ins潮爆款百搭厚底休闲板鞋",
+      "price": 199,
+      "pic_url": "https://img-blog.csdnimg.cn/b62067e3de8f4cc787d71f97314eb5d3.png",
+      "detail_url": "https://m.tb.cn/h.fm5Heha?tk=07j32WT7ByW" }],
+
+
+    "运动鞋": [
+    {
+      "title": "安德玛男女HOVR FLOW运动休闲透气网面超轻跑鞋",
+      "price": 1099,
+      "pic_url": "https://img-blog.csdnimg.cn/7df263cfba324f13bbdc2f8eac4ca012.png",
+      "detail_url": "https://m.tb.cn/h.fm5sQYS?tk=Dvhz2WT7mlw" },
+
+    {
+      "title": "FILA斐乐女休闲鞋阿甘鞋百搭跑步鞋2021秋冬情侣透气运动鞋潮女鞋",
+      "price": 680,
+      "pic_url": "https://img-blog.csdnimg.cn/a0604673126c4956afa996c8b558fe45.png",
+      "detail_url": "https://m.tb.cn/h.fPgHdHI?tk=2iL72WTRcx2" }],
+
+
+    "马丁靴": [
+    {
+      "title": "回力复古马丁靴女英伦风2021春季平底帆布短靴潮ins酷骑士机车靴",
+      "price": 138,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/3567717144/O1CN01IdODDk22e06rnAerH_!!3567717144.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-14490448347.95.f45619c9HJj3sh&id=654083367322&rn=629337490d2d27e889f74f63a71f4926&abbucket=9" },
+
+    {
+      "title": "回力白色马丁靴女内增高2021春季百搭潮ins酷厚底靴子英伦风短靴",
+      "price": 138,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/3567717144/O1CN01HuJ0qQ22e06xisZvp_!!3567717144.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-17553975324.105.571618caWwxTEQ&id=625703991272&rn=a1065f92e5dd53c23857365b91e83d43&abbucket=9" },
+
+    {
+      "title": "回力马丁靴女英伦风2020秋冬季中跟厚底增高时尚短靴ins春秋单靴",
+      "price": 218,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/3567717144/O1CN01oe9hx122e06ttHLJ5_!!3567717144.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-17553975324.75.571618caWwxTEQ&id=624573776232&rn=a1065f92e5dd53c23857365b91e83d43&abbucket=9" },
+
+    {
+      "title": "回力马丁靴女秋季2021新款百搭厚底英伦风透气潮ins酷显脚小短靴",
+      "price": 138,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/3567717144/O1CN01HBdqj722e06gS0uLp_!!3567717144.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-17553975324.60.571618caWwxTEQ&id=623741898146&rn=a1065f92e5dd53c23857365b91e83d43&abbucket=9" }] },
+
+
+
+  "老人": {
+    "休闲鞋": [
+    {
+      "title": "老北京布鞋女妈妈鞋夏季老人健步鞋防滑软底中老年女鞋透气网面鞋",
+      "price": 108,
+      "pic_url": "https://img-blog.csdnimg.cn/c5d770ddf73d4170bd4be15adb5ec0dc.png",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.3-b.w4011-6865621475.87.23177034JBHR0f&id=591624441917&rn=12e2907e8f04991468f5ec7a6e2c26ab&abbucket=3" },
+
+    {
+      "title": "春秋妈妈运动鞋轻便老人鞋女防滑软底舒适中老年健步鞋休闲旅游鞋",
+      "price": 118,
+      "pic_url": "https://img.alicdn.com/imgextra/i1/2073566766/O1CN01ORPOkJ1zqsLGlso7g_!!0-item_pic.jpg_430x430q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.3-b.w4011-6865621475.77.23177034JBHR0f&id=603475950589&rn=12e2907e8f04991468f5ec7a6e2c26ab&abbucket=3" }],
+
+
+    "爸爸鞋": [
+    {
+      "title": "冬季老人棉鞋加绒保暖加厚爸爸户外雪地靴防滑中老年休闲运动鞋男",
+      "price": 108,
+      "pic_url": "https://img.alicdn.com/imgextra/i2/2073566766/O1CN01DCsyKP1zqsPQs0L3L_!!2073566766.jpg_430x430q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.3-b.w4011-6865621475.51.440a70347sBuxb&id=651127656491&rn=33a92dd291f9ae0d3172519605e094bf&abbucket=3" },
+
+    {
+      "title": "爸爸鞋冬季新款运动休闲中老年健步鞋男防滑软底轻便老人鞋秋冬款",
+      "price": 128,
+      "pic_url": "https://img.alicdn.com/imgextra/i4/2073566766/O1CN01WXFnab1zqsTXMowSx_!!2073566766.jpg_430x430q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.3-b.w4011-6865621475.41.440a70347sBuxb&id=630164871890&rn=33a92dd291f9ae0d3172519605e094bf&abbucket=3" }] },
+
+
+
+  "孕妇": {
+    "毛毛鞋": [
+    {
+      "title": "女冬季2021新款真皮平底毛毛鞋外穿保暖孕妇鞋加绒乐福棉鞋",
+      "price": 148,
+      "pic_url": "https://img.alicdn.com/imgextra/https://img.alicdn.com/imgextra/i1/2201211266708/O1CN01meRGwA1zQJNHSD7B0_!!2201211266708.jpg_430x430q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b.w4011-21628959380.56.d5f67ecfJTl24E&id=601786614897&rn=8c6e0689391ce0ceb9c730885b2f7485&abbucket=3" },
+
+    {
+      "title": "真皮女冬加绒平底2021秋冬新款网红百搭毛毛鞋外穿软底棉鞋",
+      "price": 148,
+      "pic_url": "https://img.alicdn.com/imgextra/i3/2201211266708/O1CN01pQWLCq1zQJOTWobVM_!!0-item_pic.jpg_430x430q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?spm=a1z10.5-b.w4011-21628959380.91.d5f67ecfJTl24E&id=601791410155&rn=8c6e0689391ce0ceb9c730885b2f7485&abbucket=3" }],
+
+
+    "豆豆鞋": [
+    {
+      "title": "瞌睡豆水洗不掉色加绒豆豆鞋女秋冬大码百搭休闲平底鞋防滑棉鞋女",
+      "price": 59,
+      "pic_url": "https://img.alicdn.com/imgextra/i1/2206794950961/O1CN01ODpKJK1IyBExqYYFo_!!0-item_pic.jpg_430x430q90.jpg",
+      "detail_url": "https://detail.tmall.com/item.htm?id=607380045550&ali_refid=a3_430582_1006:1259660043:N:FRw3s93zy9Gp6UwdK+mhto+0YCUZllek:c52768b87d86cc3bc2e774ea2d839bcc&ali_trackid=1_c52768b87d86cc3bc2e774ea2d839bcc&spm=a230r.1.14.1" },
+
+    {
+      "title": "chicli 羊羔毛棉瓢鞋秋冬季魔术贴加绒豆豆鞋单鞋女平底外穿",
+      "price": 73,
+      "pic_url": "https://gd2.alicdn.com/imgextra/i2/1731007485/O1CN01yHVkKJ25ABGjDaxps_!!1731007485.jpg",
+      "detail_url": "https://item.taobao.com/item.htm?spm=a230r.1.14.173.323952047aqxQA&id=659446450145&ns=1&abbucket=12#detail" }] } };
+
+
+
+
+
+
+
+
+//var stRes={}
+exports.stRes = stRes;
 
 /***/ })
-]]);
+
+}]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

@@ -27,7 +27,7 @@ body {
 		background-color: #4797EB;
 }
 .g-header {
-		position: fixed;
+		position: absolute;
 		width: 21.25rem;
 		display: flex;
 		justify-content: space-around;
@@ -115,7 +115,7 @@ body {
 		background-color: rgb(218, 218, 218);
 }
 .m-body {
-		margin: 40 1.5rem;
+		margin: 1.5625rem 1.5rem;
 		width: 20.4375rem;
 		display: flex;
 		flex-direction: column;

@@ -22,6 +22,12 @@
 			"backgroundColor":"#f5f5f5"
 		}
 	},{
+		"path":"pages/shops/shops",
+		"style":{
+			"navigationStyle":"custom",
+			"disableScroll":true
+		}
+	},{
 		"path":"pages/shoes/myAddress/myAddress",
 		"style":{
 			"navigationBarTitleText":"我的地址"
@@ -30,6 +36,12 @@
 		"path":"pages/shoes/myFav/myFav",
 		"style":{
 			"navigationBarTitleText":"我的收藏",
+			"backgroundColor":"#F6F6F6"
+		}
+	},{
+		"path":"pages/shops/stPane/stPane",
+		"style":{
+			"navigationBarTitleText":"商品清单",
 			"backgroundColor":"#F6F6F6"
 		}
 	}],
@@ -54,7 +66,12 @@
 			"text":"首页",
 	        "selectedIconPath": "static/images/tabBar/selected/home.png",
 	        "iconPath": "static/images/tabBar/unselected/home.png"
-	      },
+	      },{
+			  "pagePath": "pages/shops/shops",
+			  "text":"商城",
+			  "selectedIconPath": "static/images/tabBar/selected/shop.png",
+			  "iconPath": "static/images/tabBar/unselected/shop.png"
+		  },
 	      {
 	        "pagePath": "pages/photograph/photograph",
 			"text":"拍照",

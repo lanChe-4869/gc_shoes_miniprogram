@@ -1,14 +1,15 @@
 <template>
 	<view class=".container">
+		<button open-type="getUserProfile" bindtap="getUserProfile" style="display: none;"></button>
 		<view class="g-header">
 			<view class="headImg-box">
-				<image src="../../static/images/shoes/user.png" style="width: 100rpx;" mode="widthFix"></image>
+				<image :src="avatarUrl" style="width: 100%;" mode="widthFix"></image>
 			</view>
 			<view class="header-desc">
 				<view class="header-name">
-					<text>用户名</text>
+					<text>{{username}}</text>
 				</view>
-				<view class="header-credit">当前信用积分 <text style="color:#4797EB">1325</text></view>
+				<view class="header-credit">当前信用积分 <text style="color:#4797EB">&nbsp;{{score}}</text></view>
 			</view>
 			<view class="header-setting">
 				<image style="width:40rpx;height:40rpx;" src="../../static/images/shoes/setting.png"></image>
@@ -35,7 +36,7 @@
 				</view>
 			</view>
 			<view class="line"></view>
-			
+
 			<view class="md-box" @click="toMyAddress">
 				<view class="md-box-left">
 					<image style="width:56rpx;height:56rpx;" src="../../static/images/shoes/location.png"></image>
@@ -45,9 +46,9 @@
 					<image style="width:60rpx;height:60rpx;" src="../../static/images/shoes/rightArrow.png"></image>
 				</view>
 			</view>
-			
+
 			<view class="line"></view>
-			
+
 			<view class="md-box" @click="undevelopedFunc">
 				<view class="md-box-left">
 					<image style="width:56rpx;height:56rpx;" src="../../static/images/shoes/service.png"></image>
@@ -57,9 +58,9 @@
 					<image style="width:60rpx;height:60rpx;" src="../../static/images/shoes/rightArrow.png"></image>
 				</view>
 			</view>
-			
+
 			<view class="line"></view>
-			
+
 			<view class="md-box">
 				<view class="md-box-left">
 					<image style="width:56rpx;height:56rpx;" src="../../static/images/shoes/feedback.png"></image>
@@ -69,68 +70,144 @@
 					<image style="width:60rpx;height:60rpx;" src="../../static/images/shoes/rightArrow.png"></image>
 				</view>
 			</view>
-			
+
 		</view>
 
 	</view>
 </template>
 
 <script>
-	export default{
-		data(){
-			
+	export default {
+		data() {
+			return {
+				username: '用户名',
+				avatarUrl: '../../static/images/shoes/user-head.png',
+				score: 0,
+				hasUserInfo: false,
+			}
 		},
-		methods:{
-			toMyAddress(){
+		onLoad() {
+
+		},
+		onShow() {
+			const that = this
+			if (this.hasUserInfo == false) {
+				wx.showModal({
+					title: '温馨提示',
+					content: '亲，授权微信登录后才能正常使用小程序功能',
+					success(res) {
+						console.log(0)
+						console.log(res)
+						//如果用户点击了确定按钮
+						if (res.confirm) {
+							wx.getUserProfile({
+								desc: '获取你的昵称、头像、地区及性别',
+								success: res => {
+									console.log(1);
+									console.log(res);
+									that.avatarUrl = res.userInfo.avatarUrl
+									that.username = res.userInfo.nickName
+									that.score = 300
+									that.hasUserInfo=true
+								},
+								fail: res => {
+									console.log(2);
+									console.log(res)
+									//拒绝授权
+									wx.showToast({
+										title: '将无法正常使用',
+										icon: 'error',
+										duration: 2000
+									});
+									return;
+								}
+							});
+						} else if (res.cancel) {
+							//如果用户点击了取消按钮
+							console.log(3);
+							uni.showToast({
+								title: '将无法正常使用',
+								icon: 'error',
+								duration: 2000
+							});
+							return;
+						}
+					}
+				})
+
+			}
+
+		},
+		methods: {
+			toMyAddress() {
 				uni.navigateTo({
-				  url: './myAddress/myAddress',
-				  events: {
-				    // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-				    acceptDataFromOpenedPage: function(data) {
-				      console.log(data)
-				    },
-				    someEvent: function(data) {
-				      console.log(data)
-				    }
-				  },
-				  success: function(res) {
-				    // 通过eventChannel向被打开页面传送数据
-				    res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
-					console.log(res);
-				  },
-				  fail:function(res){
-					  console.log(res);
-				  }
+					url: './myAddress/myAddress',
+					events: {
+						// 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+						acceptDataFromOpenedPage: function(data) {
+							console.log(data)
+						},
+						someEvent: function(data) {
+							console.log(data)
+						}
+					},
+					success: function(res) {
+						// 通过eventChannel向被打开页面传送数据
+						res.eventChannel.emit('acceptDataFromOpenerPage', {
+							data: 'test'
+						})
+					},
+					fail: function(res) {
+						console.log(res);
+					}
 				});
 			},
-			toMyFav(){
+			toMyFav() {
 				uni.navigateTo({
-				  url: './myFav/myFav',
-				  events: {
-				    // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-				    acceptDataFromOpenedPage: function(data) {
-				      console.log(data)
-				    },
-				    someEvent: function(data) {
-				      console.log(data)
-				    }
-				  },
-				  success: function(res) {
-				    // 通过eventChannel向被打开页面传送数据
-				    res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
-					console.log(res);
-				  },
-				  fail:function(res){
-					  console.log(res);
-				  }
+					url: './myFav/myFav',
+					events: {
+						// 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+						acceptDataFromOpenedPage: function(data) {
+							console.log(data)
+						},
+						someEvent: function(data) {
+							console.log(data)
+						}
+					},
+					success: function(res) {
+						// 通过eventChannel向被打开页面传送数据
+						res.eventChannel.emit('acceptDataFromOpenerPage', {
+							data: 'test'
+						})
+						console.log(res);
+					},
+					fail: function(res) {
+						console.log(res);
+					}
 				});
 			},
-			undevelopedFunc(){
+			undevelopedFunc() {
 				uni.showToast({
-				    title: "敬请期待",
-					image:"../../static/error.png",
-				    duration: 1000
+					title: "敬请期待",
+					image: "../../static/error.png",
+					duration: 1000
 				});
+			},
+			getUserProfile() {
+				console.log("debug")
+				const that = this
+				wx.getUserProfile({
+					desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+					success: (res) => {
+						console.log(res.userInfo)
+						that.avatarUrl = res.userInfo.avatarUrl
+						that.username = res.userInfo.nickName
+						that.score = 300
+					},
+					fail: (error) => {
+						console.log(error)
+					}
+				})
 			}
 		}
 	}
@@ -147,6 +224,7 @@
 		overflow-y: scroll;
 		width: 750rpx;
 	}
+
 	.line {
 		border-top: 2px solid #e0e0e0;
 		width: 90%;

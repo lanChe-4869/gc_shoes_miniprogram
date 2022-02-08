@@ -2,14 +2,17 @@
   "pages": [
     "pages/index/index",
     "pages/photograph/photograph",
-    "pages/shoes/shoes"
+    "pages/shoes/shoes",
+    "pages/shops/shops",
+    "pages/shoes/myAddress/myAddress",
+    "pages/shoes/myFav/myFav",
+    "pages/shops/stPane/stPane"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#4797EB",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fdfdfd",
+    "backgroundColor": "#F5F5F5"
   },
   "tabBar": {
     "backgroundColor": "#ffffff",
@@ -24,6 +27,12 @@
         "text": "首页",
         "selectedIconPath": "static/images/tabBar/selected/home.png",
         "iconPath": "static/images/tabBar/unselected/home.png"
+      },
+      {
+        "pagePath": "pages/shops/shops",
+        "text": "商城",
+        "selectedIconPath": "static/images/tabBar/selected/shop.png",
+        "iconPath": "static/images/tabBar/unselected/shop.png"
       },
       {
         "pagePath": "pages/photograph/photograph",

@@ -110,6 +110,12 @@
           "iconPath": "/static/images/tabBar/unselected/home.png"
         },
         {
+          "pagePath": "pages/shops/shops",
+          "text": "商城",
+          "selectedIconPath": "/static/images/tabBar/selected/shop.png",
+          "iconPath": "/static/images/tabBar/unselected/shop.png"
+        },
+        {
           "pagePath": "pages/photograph/photograph",
           "text": "拍照",
           "selectedIconPath": "/static/images/tabBar/selected/photograph.png",

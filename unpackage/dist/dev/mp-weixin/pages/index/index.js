@@ -13,9 +13,9 @@
 /* 11 */,
 /* 12 */,
 /* 13 */
-/*!****************************************************************!*\
-  !*** D:/source/test1/main.js?{"page":"pages%2Findex%2Findex"} ***!
-  \****************************************************************/
+/*!*******************************************************************!*\
+  !*** D:/source/gc_shoes/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28,9 +28,9 @@ createPage(_index.default);
 
 /***/ }),
 /* 14 */
-/*!*********************************************!*\
-  !*** D:/source/test1/pages/index/index.vue ***!
-  \*********************************************/
+/*!************************************************!*\
+  !*** D:/source/gc_shoes/pages/index/index.vue ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -68,9 +68,9 @@ component.options.__file = "pages/index/index.vue"
 
 /***/ }),
 /* 15 */
-/*!****************************************************************************!*\
-  !*** D:/source/test1/pages/index/index.vue?vue&type=template&id=57280228& ***!
-  \****************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/source/gc_shoes/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \*******************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -89,9 +89,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 16 */
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/test1/pages/index/index.vue?vue&type=template&id=57280228& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/gc_shoes/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -115,9 +115,9 @@ render._withStripped = true
 
 /***/ }),
 /* 17 */
-/*!**********************************************************************!*\
-  !*** D:/source/test1/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************/
+/*!*************************************************************************!*\
+  !*** D:/source/gc_shoes/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -130,14 +130,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 18 */
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/test1/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/gc_shoes/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
 //
 //
 //
@@ -242,16 +243,106 @@ var _default =
 {
   data: function data() {
     return {
-      href: 'https://uniapp.dcloud.io/component/README?id=uniui' };
+      href: 'https://uniapp.dcloud.io/component/README?id=uniui',
+      shoesLeft: [{
+        src: "https://img-blog.csdnimg.cn/f0c8d213c40a40609d10a4d9d09c1afc.png",
+        season: "spring",
+        title: "LiNing 李宁",
+        desc: "减震回弹篮球鞋",
+        price: '799.00' },
+      {
+        src: "https://img-blog.csdnimg.cn/0cfdd0d0344f47ef8ae9eae339a5c567.png",
+        season: "spring",
+        title: "Puma 彪马",
+        desc: "厚底休闲鞋",
+        price: '399.00' },
+      {
+        src: "https://img-blog.csdnimg.cn/e6bd4f88865a498b913e4684ae38ab6b.png",
+        season: "spring",
+        title: "LiNing 李宁",
+        desc: "韦德之道 幻影3",
+        price: '499.00' },
+      {
+        src: "https://img-blog.csdnimg.cn/e5863c7ab4224be0b198be48c8f22c90.png",
+        season: "summer",
+        title: "Anta 安踏",
+        desc: "KT6 水花三代 水彩",
+        price: '400.00' },
+      {
+        src: "https://img-blog.csdnimg.cn/9b849bd3687242f3bfe15d00a04865bf.png",
+        season: "spring",
+        title: "LiNing 李宁",
+        desc: "绝影CRC 跑鞋",
+        price: '889.00' }],
+
+
+
+      shoesRight: [{
+        src: "https://img-blog.csdnimg.cn/2564ea9964ce447199141fea53aa3ade.png",
+        season: "summer",
+        title: "LiNing 李宁",
+        desc: "减震回弹篮球鞋",
+        price: "799.00" },
+      {
+        src: "https://img-blog.csdnimg.cn/dca5fec4bac148788222c9e91db11290.png",
+        season: "spring",
+        title: "HuiLi 回力",
+        desc: "休闲回天之力板鞋",
+        price: "318.00" },
+      {
+        src: "https://img-blog.csdnimg.cn/64e0c0b7106c4e4391a831d146a5edfd.png",
+        season: "summer",
+        title: "LiNing 李宁",
+        desc: "舒适休闲鞋",
+        price: "299.00" },
+      {
+        src: "https://img-blog.csdnimg.cn/18a1f9bce88d47a7a4e5d30e353d1bfd.png",
+        season: "summer",
+        title: "Converse 匡威",
+        desc: "百搭休闲板鞋",
+        price: "499.00" },
+      {
+        src: "https://img-blog.csdnimg.cn/141910b5005643f493fbe44428594f1b.png",
+        season: "summer",
+        title: "LiNing 李宁",
+        desc: "惟吾Superwave",
+        price: "499.00" },
+      {
+        src: "https://img-blog.csdnimg.cn/b11406ccf77a46798428987587de4d2e.png",
+        season: "spring",
+        title: "Puma 彪马",
+        desc: "Puma Ralph Sampson",
+        price: "399.00" }] };
+
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    getPhoto: function getPhoto() {
+      uni.chooseImage({
+        count: 1, //默认9
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        success: function success(res) {
+          console.log(JSON.stringify(res.tempFilePaths));
+        } });
+
+    } },
+
+  created: function created() {
+
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline'] });
+
+
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! @dcloudio/uni-mp-weixin/dist/uni.api.esm.js */ 3)["default"]))
 
 /***/ }),
 /* 19 */
-/*!******************************************************************************!*\
-  !*** D:/source/test1/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
-  \******************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/source/gc_shoes/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -264,9 +355,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 20 */
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/test1/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/source/gc_shoes/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

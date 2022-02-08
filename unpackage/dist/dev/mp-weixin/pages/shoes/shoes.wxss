@@ -73,6 +73,147 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* pages/shoes/shoes.css */
 page {
 	background: #f6f6f6;
@@ -93,7 +234,7 @@ page {
 	padding: 30rpx 32rpx;
 	display: flex;
 	align-items: center;
-	background: rgba(104, 104, 104, 0.11);
+	background: #FFFFFF;
 }
 .headImg-box {
 	width: 128rpx;
